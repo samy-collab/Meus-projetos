@@ -1,0 +1,41 @@
+CREATE TABLE alunos(
+  id SERIAL PRIMARY KEY NOT NULL,
+  nome VARCHAR(50) NOT NULL,
+  idade INTEGER NOT NULL,
+  curso varchar(50) NOT NULL
+);
+INSERT INTO alunos(nome,idade,curso)values('Ronaldo Soranco',21,'tecnico em desenvolvimento de sistemas');
+
+select nome from alunos;
+
+select * from alunos where idade >20;
+
+INSERT INTO alunos (nome, idade, curso)
+
+VALUES ('João', 22, 'Matemática');
+
+UPDATE alunos
+
+SET curso = 'Engenharia'
+
+WHERE nome = 'João';
+
+DELETE FROM alunos
+
+WHERE nome = 'João';
+
+SELECT * FROM alunos
+
+ORDER BY idade DESC;
+
+SELECT * FROM alunos
+
+WHERE idade > 20 AND curso = 'Engenharia';
+
+INSERT INTO alunos (nome, idade, curso) VALUES
+
+('Maria Silva', 19, 'Direito'),
+
+('Carlos Pereira', 25, 'Agronomia');
+
+SELECT * FROM alunos
