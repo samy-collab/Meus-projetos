@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Atividade3 {
+    private static final String logincorreto = "joaozinho123";
+    private static final String senhacorreta = "java78";
+    public static void main(String[] args) {
+        Scanner auxiliar = new Scanner(System.in);
+        int tentativaspara_acessar = 4;
+        boolean logincertoouerrado = false;
+
+        while (tentativaspara_acessar > 0 && !logincertoouerrado ) {
+            System.out.print("Login: ");
+            String login = auxiliar.nextLine();
+            
+            System.out.print("Senha: ");
+            String senha = auxiliar.nextLine();
+
+            if (login.equals(logincorreto) && senha.equals(senhacorreta)) {
+                logincertoouerrado = true;
+                System.out.println("Acesso liberado! ");
+            }else{
+                tentativaspara_acessar--;
+                if (tentativaspara_acessar>0) {
+                    System.out.println("Seu login ou senha estão incorretos , voce ainda tem"+ tentativaspara_acessar+ "tentativas");
+
+
+                }else{System.out.println("Numero de tentativas maximo excedido");}
+            }
+        }
+    }
+        }
