@@ -1,0 +1,25 @@
+import javax.swing.JOptionPane;
+
+public class atividade01 {
+    public static void main(String[] args) {
+        
+       String auxiliarDesconto;
+
+       float valorDoProduto, percentualDeDesconto, valorDoProdutoComDesconto;
+
+       try{
+        auxiliarDesconto = JOptionPane.showInputDialog("Insira o percentual de desconto: ");
+        percentualDeDesconto = Float.parseFloat(auxiliarDesconto);
+
+        auxiliarDesconto = JOptionPane.showInputDialog("Insira o valor do produto: ");
+        valorDoProduto = Float.parseFloat(auxiliarDesconto);
+
+        valorDoProdutoComDesconto = valorDoProduto - (valorDoProduto * percentualDeDesconto/100);
+
+        JOptionPane.showMessageDialog(null,"O valor do produto com desconto é:"+ valorDoProdutoComDesconto+"\n" + "O percentual de desconto é" + percentualDeDesconto );
+       }catch(Exception e){
+        System.out.println("Não insira letras na variável!");
+       }
+
+    }
+}
